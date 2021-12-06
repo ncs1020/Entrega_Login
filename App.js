@@ -6,6 +6,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import HomeScreen from './vista/HomeScreen';
 import RandomScreen from './vista/RandomScreen';
 import InfoScreen from './vista/InfoScreen';
+import LoginScreen from './vista/LoginScreen';
 
 
 const Drawer = createDrawerNavigator();
@@ -13,7 +14,8 @@ const Drawer = createDrawerNavigator();
 export default function App() {
   return (
     <NavigationContainer>
-      <Drawer.Navigator initialRouteName="Inicio">
+        <Drawer.Navigator initialRouteName="Login">
+        <Drawer.Screen component={LoginScreen} name='Login' />  
         <Drawer.Screen component={HomeScreen} name='Inicio' />
         <Drawer.Screen component={RandomScreen} name='Random' />
         <Drawer.Screen component={InfoScreen} name='Info' />
@@ -21,3 +23,4 @@ export default function App() {
     </NavigationContainer>
   );
 }
+
